@@ -12,9 +12,12 @@ const styles = StyleSheet.create({
     inputText: {
       color: '#ccc',
       fontSize: 20,
+      paddingBottom: 10,
+      marginBottom: 5,
     },
     inputPicker: {
       color: '#ccc',
+      marginBottom: 5,
     },
     bmiContainer: {
       maxHeight: 300,
@@ -24,10 +27,10 @@ const styles = StyleSheet.create({
       maxHeight: 450,
       minHeight: 450,
     },
-    zinsContainer: {
-      maxHeight: 450,
-      minHeight: 450,
-    },
+    // zinsContainer: {
+    //   maxHeight: 450,
+    //   minHeight: 450,
+    // },
     notification: {
       marginTop: 5,
       marginBottom: 5,

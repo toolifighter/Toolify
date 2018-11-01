@@ -109,9 +109,9 @@ export default class BMI extends React.Component {
         <Text style={styles.headertext}>BMI-Rechner</Text>
         <View style={[styles.inputContainer, styles.bmiContainer]}>
           <Text style={styles.inputText}>Größe (cm):</Text>
-          <TextInput onChangeText={this.eingabeGroesse} value={this.state.groesse} style={styles.inputText} placeholder="-"></TextInput>
+          <TextInput onChangeText={this.eingabeGroesse} value={this.state.groesse} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
           <Text style={styles.inputText}>Gewicht (kg):</Text>
-          <TextInput onChangeText={this.eingabeGewicht} value={this.state.gewicht} style={styles.inputText} placeholder="-"></TextInput>
+          <TextInput onChangeText={this.eingabeGewicht} value={this.state.gewicht} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
         </View>
         <View style={styles.outputContainer}>
           <Button onPress={this.berechnen} title="BMI berechnen"/>

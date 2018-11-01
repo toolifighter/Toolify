@@ -208,9 +208,9 @@ export default class Zinsber extends React.Component {
             <Text style={styles.headertext}>Zinsrechner</Text>
             <View style={[styles.inputContainer, styles.zinsContainer]}>
                <Text style={styles.inputText}>Startkapital (€):</Text>
-               <TextInput onChangeText={this.Startkapital} value={this.state.startkapital} style={styles.inputText} placeholder="-"></TextInput>
+               <TextInput onChangeText={this.Startkapital} value={this.state.startkapital} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
                <Text style={styles.inputText}>Zinssatz (%):</Text>
-               <TextInput onChangeText={this.Zinssatz} value={this.state.zins} style={styles.inputText} placeholder="-"></TextInput>
+               <TextInput onChangeText={this.Zinssatz} value={this.state.zins} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
                <Text style={styles.inputText}>Laufzeit:</Text>
                <Picker
                   selectedValue={this.state.intervallzeit}
@@ -220,7 +220,7 @@ export default class Zinsber extends React.Component {
                   <Picker.Item label="in Monaten" value="monate" style={styles.inputText}/>
                   <Picker.Item label="in Jahren" value="jahre" style={styles.inputText}/>
                </Picker>
-               <TextInput onChangeText={this.Zeit} value={this.state.zeit} style={styles.inputText} placeholder="-"></TextInput>
+               <TextInput onChangeText={this.Zeit} value={this.state.zeit} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
                <Text style={styles.inputText}>Einzahlung: (€)</Text>
                <Picker
                   selectedValue={this.state.intervalleinzahlung}
@@ -237,7 +237,7 @@ export default class Zinsber extends React.Component {
                   <Picker.Item label="vorschüssig" value="vor" style={styles.inputText}/>
                   <Picker.Item label="nachschüssig" value="nach" style={styles.inputText}/>
                </Picker>
-               <TextInput onChangeText={this.Einzahlung} value={this.state.einzahlung} style={styles.inputText} placeholder="-"></TextInput>
+               <TextInput onChangeText={this.Einzahlung} value={this.state.einzahlung} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
             </View>
             <Button onPress={this.berechnenGewinn} title="Zins berechnen"/>
             {this.state.ausgabeindicator ? <View style={[styles.outputContainer, {backgroundColor: this.state.ausgabecolor}, styles.notification]}>

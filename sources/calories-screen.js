@@ -7,9 +7,9 @@ export default class Calories extends React.Component {
     isLoadingComplete: false,
     notification: null,
     sex: null,
-    gewicht: '',
-    groesse: '',
-    alter: '',
+    gewicht: null,
+    groesse: null,
+    alter: null,
     grundumsatz: null,
     notification: null,
     bgColorNotification: null,
@@ -21,9 +21,9 @@ export default class Calories extends React.Component {
       isLoadingComplete: false,
       notification: null,
       sex: null,
-      gewicht: '',
-      groesse: '',
-      alter: '',
+      gewicht: null,
+      groesse: null,
+      alter: null,
       grundumsatz: null,
       notification: null,
       bgColorNotification: null,
@@ -50,6 +50,7 @@ export default class Calories extends React.Component {
   }
 
   berechnenGrundumsatz = () => {
+    console.log(this.state);
     this.setState({isExecuted: true})
     let h = parseInt(this.state.groesse);
     let g = parseInt(this.state.gewicht);
@@ -63,10 +64,15 @@ export default class Calories extends React.Component {
       u = (655,1 + (9,6 * g) + (1,8 * h) - (4,7 * a));
       break;
     }
-    if (typeof u == "number" && true != isNaN(u)) {      
+    if (typeof u == "number" && true != isNaN(u) && u > 0) {      
       this.setState({
         notification: 'Ihr Grundumsatz beträgt ' + u + ' kcal.',
         bgColorNotification: '#ccc',
+      });
+    } else if (u <= 0) {
+      this.setState({
+        notification: 'Fehler: Ergebnis nicht real. Überprüfen Sie Ihre Eingabe!',
+        bgColorNotification: '#FE4141',
       });
     } else {      
       this.setState({
@@ -92,11 +98,11 @@ export default class Calories extends React.Component {
             <Picker.Item label="männlich" value="m" style={styles.inputText}/>
           </Picker>
           <Text style={styles.inputText}>Größe (cm):</Text>
-          <TextInput onChangeText={this.eingabeGroesse} value={this.state.groesse} style={styles.inputText} placeholder="-"></TextInput>
+          <TextInput onChangeText={this.eingabeGroesse} value={this.state.groesse} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
           <Text style={styles.inputText}>Gewicht (kg):</Text>
-          <TextInput onChangeText={this.eingabeGewicht} value={this.state.gewicht} style={styles.inputText} placeholder="-"></TextInput>
+          <TextInput onChangeText={this.eingabeGewicht} value={this.state.gewicht} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
           <Text style={styles.inputText}>Alter:</Text>
-          <TextInput onChangeText={this.eingabeAlter} value={this.state.alter} style={styles.inputText} placeholder="-"></TextInput>
+          <TextInput onChangeText={this.eingabeAlter} value={this.state.alter} style={styles.inputText} placeholder="Bitte eingeben!" placeholderTextColor="#4A4A4A"></TextInput>
         </View>
         <View style={styles.outputContainer}>
           <Button onPress={this.berechnenGrundumsatz} title="Grundumsatz berechnen"/>
