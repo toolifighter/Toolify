@@ -74,7 +74,7 @@ export default class Zinsber extends React.Component {
             ausgabecolor: '#f00',
             ausgabeindicator: true,
          })
-      } else if (thi.state.zins == "") {
+      } else if (this.state.zins == "") {
          this.setState({
             ausgabetext: 'Fehlender Zinssatz',
             ausgabecolor: '#f00',
@@ -169,7 +169,8 @@ export default class Zinsber extends React.Component {
                      ausgabecolor: '#f00',
                      ausgabeindicator: true,
                   })       
-               } else if (this.state.intervallzeit = "monatlich") {
+               } else if (this.state.intervallzeit == "monate") {
+                   console.log("hi")
                   this.setState({
                      ausgabetext: 'monatlicher Intervall mit Einzahlung noch nicht unterstützt',
                      ausgabecolor: '#f00',
@@ -253,4 +254,4 @@ export default class Zinsber extends React.Component {
          </View>
       </ScrollView>    
    }
-}  
+} 
