@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Toolify",
-    "description": "A very interesting project.",
+    "description": "An App for everything.",
     "slug": "toolify",
     "privacy": "public",
     "sdkVersion": "30.0.0",
@@ -23,8 +23,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    
     "ios": {
       "supportsTablet": true
-    }
+    },
+
+    "android": {
+      "package": "com.yourcompany.yourappname"
+    },
+    
+    
+    "githubUrl": "https://github.com/toolifighter/Toolify"
   }
 }
