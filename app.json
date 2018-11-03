@@ -9,11 +9,11 @@
       "ios",
       "android"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,14 +25,15 @@
     ],
     
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ericjkl.toolifyapp"
     },
 
     "android": {
-      "package": "com.yourcompany.yourappname"
+      "package": "com.ericjkl.toolifyapp"
     },
     
     
-    "githubUrl": "https://github.com/toolifighter/Toolify"
+    "githubUrl": "https://github.com/ericjkl/toolapp"
   }
 }
