@@ -2,7 +2,6 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     inputContainer: {
-      marginTop: 40,
       padding: 40,
       backgroundColor: '#333',
       flex: 1,
@@ -57,7 +56,6 @@ const styles = StyleSheet.create({
     },
     container: {
       flex: 1,
-      paddingTop: 60,
       justifyContent: "flex-start",
       backgroundColor: '#fff',
     },
@@ -66,8 +64,20 @@ const styles = StyleSheet.create({
       fontSize: 40,
     },
     headertext: {
-      fontSize: 30,
-      textAlign: 'center',
+      fontSize: 25,
+      textAlign: 'left',
     },
+    header : {
+      paddingLeft: 20,
+      paddingTop: 45,
+      paddingBottom: 15,
+      height: 'auto',
+      backgroundColor: '#DBDBDB'
+    },
+    // headerContents: {
+    //   paddingTop: 15,
+    //   paddingBottom: 15,
+    //   marginLeft: 5,
+    // }
   });
   export default styles;
